@@ -9,3 +9,6 @@ if (url === "/") {
   res.writeHead(404); //rota nao cadastrada
   res.end("Rota nao cadastrada");
 }
+
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
