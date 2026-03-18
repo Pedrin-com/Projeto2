@@ -1,7 +1,6 @@
 {
   "name": "projeto2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,9 +16,15 @@
     "url": "https://github.com/Pedrin-com/Projeto2/issues"
   },
   "homepage": "https://github.com/Pedrin-com/Projeto2#readme",
-  "keywords": [],
-  "dependencies": {
+  "description": "",
+  "devDependencies": {
     "nodemon": "^3.1.14"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "mariadb": "^3.5.2",
+    "morgan": "^1.10.1"
+  }
 }

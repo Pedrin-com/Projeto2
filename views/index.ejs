@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <%- include('./partials/head.ejs') %>
+
+  <body>
+    <div class="sidebar">
+      <h2> Concessionária </h2>
+
+      <a href="#"> Início</a>
+      <nav>
+        <li>
+          <a href="#">Agenda</a>
+        </li>
+      </nav>
+      <a href="#"> Minhas Compra</a>
+      <a href="#">Suporte</a>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <h1>Concessionária</h1>
+        <button>+ Adicionar um carro</button>
+      </div>
+
+      <div class="cards">
+        <% if (dados && dados.length > 0) { %>
+          <% dados.forEach(function(tarefa) { %>
+            <div class="card">
+              <h3><%= tarefa.nome %></h3>
+              <div class="hora"><%= tarefa.hora || '' %></div>
+              <p><%= tarefa.descricao || '' %></p>
+
+              <div class="actions">
+                <button>✏ Editar</button>
+                <button>✔ Concluir</button>
+              </div>
+            </div>
+          <% }); %>
+        <% } else { %>
+          <div class="card">
+            <h3>Nenhum carro cadastrado</h3>
+            <p>Adicione o primeiro carro para começar!</p>
+            <div class="actions">
+              <a href="#"><button>+ Adicionar</button></a>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
